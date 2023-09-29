@@ -6,8 +6,6 @@ import imgRetroPCs from "./assets/images/image-retro-pcs.jpg";
 import imgTopLaptops from "./assets/images/image-top-laptops.jpg";
 import imgGrowth from "./assets/images/image-gaming-growth.jpg";
 
-/* https://github.com/kevin-powell/fem-manage-landing-page-part-9/blob/master/index.html */
-
 function App() {
   return (
     <div className="app-container">
@@ -34,7 +32,7 @@ function App() {
 
         <aside>
           <h2>New</h2>
-          <div>
+          <div className="aside-section">
             <article className="aside-article">
               <h3>Hydrogen VS Electric Cars</h3>
               <p>Will hydrogen-fueled cars ever catch up to EVs?</p>

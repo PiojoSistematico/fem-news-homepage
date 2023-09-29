@@ -11,13 +11,13 @@ const Menu = () => {
   }
 
   return (
-    <header>
+    <header className={isMenuOpen ? "overlay" : ""}>
       <a>
         <img src={Logo} alt="Logo" />
       </a>
 
       <button
-        className="mobile"
+        className="btn-menu mobile"
         aria-controls="primary-navigation"
         aria-expanded="false"
         onClick={handleClick}
@@ -27,20 +27,27 @@ const Menu = () => {
             className="icon-close"
             src={iconClose}
             alt="Close Menu"
-            aria-hidden="true"
+            aria-hidden="false"
           />
         ) : (
           <img
             className="icon-hamburger"
             src={iconMenu}
             alt="Open Menu"
-            aria-hidden="true"
+            aria-hidden="false"
           />
         )}
 
         <span className="visually-hidden">Menu</span>
       </button>
-      <nav className="primary-navigation desktop" id="primary-navigation">
+      <nav
+        className={
+          isMenuOpen
+            ? "menu-open primary-navigation desktop"
+            : "primary-navigation desktop"
+        }
+        id="primary-navigation"
+      >
         <ul aria-label="Primary" role="list">
           <li>
             <a href="">Home</a>
